@@ -22,21 +22,12 @@ a:hover{text-decoration:underline}
 
 /* Header */
 .header{
-  position:sticky;
-  top:0;
-  z-index:50;
+  position:sticky; top:0; z-index:50;
   backdrop-filter:blur(8px);
   background:rgba(255,255,255,.85);
   border-bottom:1px solid #eee;
 }
-.nav{
-  max-width:var(--maxw);
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:.6rem 1rem;
-}
+.nav{ max-width:var(--maxw); margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:.6rem 1rem; }
 .brand{display:inline-flex;align-items:center;gap:.6rem;font-weight:800;color:var(--ask-dark)}
 .brand-logo{height:36px;width:auto;display:block}
 .brand small{color:var(--ask-muted)}
@@ -46,12 +37,7 @@ a:hover{text-decoration:underline}
 .burger{display:none;background:none;border:0;font-size:1.4rem;padding:.4rem .6rem;border-radius:10px}
 
 /* Social link + icons */
-.social-link{
-  font-weight:600;
-  display:inline-flex;
-  align-items:center;
-  gap:.35rem;
-}
+.social-link{ font-weight:600; display:inline-flex; align-items:center; gap:.35rem; }
 .social-link i{ color:#E1306C; font-size:1.1rem; }
 footer i.fab.fa-instagram{ color:#fff; font-size:1.2rem; margin-left:.4rem; }
 .btn-outline i.fab.fa-instagram{ color:var(--ask-primary); }
@@ -59,12 +45,9 @@ footer i.fab.fa-instagram{ color:#fff; font-size:1.2rem; margin-left:.4rem; }
 @media (max-width:860px){
   .burger{display:inline-block}
   .nav-links{
-    position:fixed;
-    inset:55px 0 auto 0;
-    background:#fff;
-    border-bottom:1px solid #eee;
-    padding:.8rem 1rem;
-    display:none
+    position:fixed; inset:55px 0 auto 0;
+    background:#fff; border-bottom:1px solid #eee;
+    padding:.8rem 1rem; display:none
   }
   .nav-links.open{display:grid;grid-auto-flow:row;gap:.5rem}
 }
@@ -111,6 +94,49 @@ section{max-width:var(--maxw);margin:0 auto;padding:2.5rem 1rem}
 .date{font-weight:900;color:var(--ask-primary)}
 @media (max-width:560px){.event{grid-template-columns:1fr}}
 
+/* ---- Contact ---- */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+@media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+
+.contact-card{ padding:1rem; }
+.contact-title{ margin:.2rem 0 1rem; font-weight:800; }
+
+.hours{ margin-top:.6rem; }
+.hours-title{ font-weight:700; margin:.4rem 0; }
+.hours-table{ width:100%; border-collapse:collapse; font-size:.95rem; }
+.hours-table th{ text-align:left; padding:.35rem .4rem .35rem 0; color:var(--ask-dark); width:40%; }
+.hours-table td{ padding:.35rem 0; color:var(--ask-muted); border-bottom:1px dashed #eee; }
+.hours-note{ margin-top:.4rem; color:var(--ask-muted); font-size:.9rem; }
+
+.form-grid-two{ display:grid; grid-template-columns:1fr 1fr; gap:.8rem; }
+@media (max-width:560px){ .form-grid-two{ grid-template-columns:1fr; } }
+
+.form-row{ display:flex; flex-direction:column; gap:.35rem; margin-bottom:.75rem; }
+label{ font-weight:700; font-size:.95rem; }
+input, select, textarea{
+  width:100%; border:1px solid #e3e3e8; border-radius:12px; padding:.7rem .8rem;
+  font:inherit; background:#fff;
+}
+textarea{ resize:vertical; }
+
+.note{
+  display:none;
+  background:#fff7ff;
+  border:1px solid #f0d8f5;
+  color:#6b3f64;
+  border-radius:12px;
+  padding:.6rem .8rem;
+  font-size:.92rem;
+  margin:.4rem 0 .2rem;
+}
+
+.actions{ display:flex; gap:.6rem; flex-wrap:wrap; }
+.tiny{ font-size:.85rem; color:var(--ask-muted); margin-top:.4rem; }
+
 /* Footer */
 footer{margin-top:2rem;background:linear-gradient(135deg,var(--ask-primary),var(--ask-secondary));color:#fff}
 .footer-inner{max-width:var(--maxw);margin:0 auto;padding:1.2rem 1rem;display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
@@ -127,4 +153,6 @@ footer{margin-top:2rem;background:linear-gradient(135deg,var(--ask-primary),var(
   .card{background:#17171c;border-color:#2a2a34}
   .subtitle,.section-sub,.role,.email,.foot-small{color:#c8c8d2}
   .event{border-color:#2a2a34}
+  .hours-table td{ border-bottom:1px dashed #2a2a34; }
+  .note{ background:#241828; border-color:#3b2a40; color:#d9cfe0; }
 }

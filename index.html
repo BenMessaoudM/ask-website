@@ -7,6 +7,7 @@
   <meta name="description" content="ASK (Arcada Studerandekår / Arcada Student Union) — community, support, and student life at Arcada UAS." />
   <meta name="theme-color" content="#A32F8E" />
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Awesome for Instagram icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
@@ -30,7 +31,7 @@
         <a href="#events" data-en="Events" data-sv="Evenemang">Events</a>
         <a href="#contact" data-en="Contact" data-sv="Kontakt">Contact</a>
         <a href="https://kide.app/community/b112ffe9-2deb-4894-a4b8-ed1b70ef1a00" target="_blank" rel="noopener" style="font-weight:800">Kide.app ↗</a>
-        <a href="https://www.instagram.com/askenfi/" target="_blank" rel="noopener" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://instagram.com/arcadastuderandekar" target="_blank" rel="noopener" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
         <button id="langToggle" class="btn btn-outline" style="margin-left:1rem;">Svenska 🇸🇪</button>
       </div>
     </nav>
@@ -59,7 +60,7 @@
         <div class="cta-row">
           <a class="btn btn-primary" href="https://kide.app/community/b112ffe9-2deb-4894-a4b8-ed1b70ef1a00" target="_blank" rel="noopener">Kide.app</a>
           <a id="learn-more" class="btn btn-outline" href="#about" data-en="Learn more" data-sv="Läs mer">Learn more</a>
-          <a class="btn btn-outline" href="https://www.instagram.com/askenfi/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
+          <a class="btn btn-outline" href="https://instagram.com/arcadastuderandekar" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
         </div>
       </div>
     </section>
@@ -193,9 +194,92 @@
     <!-- CONTACT -->
     <section id="contact">
       <h2 class="section-title" data-en="Contact" data-sv="Kontakt">Contact</h2>
-      <div class="card" style="padding:1rem">
-        <p><strong>Email:</strong> info@asken.fi</p>
-        <p><strong>Support:</strong> hello@asken.fi • jessica@asken.fi • frej@asken.fi</p>
+
+      <div class="contact-grid">
+        <!-- Address & hours -->
+        <aside class="card contact-card">
+          <h3 class="contact-title" data-en="Visit us" data-sv="Besök oss">Visit us</h3>
+          <p>
+            <strong data-en="Address:" data-sv="Adress:">Address:</strong>
+            <a href="https://maps.google.com/?q=Toukolankatu 11, 00560 Helsinki" target="_blank" rel="noopener">
+              Toukolankatu 11, 00560 Helsinki
+            </a>
+          </p>
+          <p>
+            <strong data-en="Get there:" data-sv="Ta dig hit:">Get there:</strong>
+            <span data-en="~9 mins" data-sv="~9 min">~9 mins</span>
+          </p>
+          <p><strong data-en="Phone:" data-sv="Telefon:">Phone:</strong> <a href="tel:+358453274220">045 3274220</a></p>
+
+          <div class="hours">
+            <div class="hours-title" data-en="Opening hours" data-sv="Öppettider">Opening hours</div>
+            <table class="hours-table" aria-label="Opening hours">
+              <tbody>
+                <tr><th data-en="Monday" data-sv="Måndag">Monday</th><td data-en="Closed" data-sv="Stängt">Closed</td></tr>
+                <tr><th data-en="Tuesday" data-sv="Tisdag">Tuesday</th><td>12–4 pm</td></tr>
+                <tr><th data-en="Wednesday" data-sv="Onsdag">Wednesday</th><td>12–4 pm</td></tr>
+                <tr><th data-en="Thursday" data-sv="Torsdag">Thursday</th><td>12–4 pm</td></tr>
+                <tr><th data-en="Friday" data-sv="Fredag">Friday</th><td data-en="Closed" data-sv="Stängt">Closed</td></tr>
+                <tr><th data-en="Saturday" data-sv="Lördag">Saturday</th><td data-en="Closed" data-sv="Stängt">Closed</td></tr>
+                <tr><th data-en="Sunday" data-sv="Söndag">Sunday</th><td data-en="Closed" data-sv="Stängt">Closed</td></tr>
+              </tbody>
+            </table>
+            <div class="hours-note" data-en="Hours may vary during holidays or events." data-sv="Tider kan variera under helger eller evenemang.">Hours may vary during holidays or events.</div>
+          </div>
+        </aside>
+
+        <!-- Contact form -->
+        <div class="card contact-card">
+          <h3 class="contact-title" data-en="Send us a message" data-sv="Skicka ett meddelande">Send us a message</h3>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="topic" data-en="Topic" data-sv="Ärende">Topic</label>
+              <select id="topic" name="topic" required>
+                <option value="general" selected data-en="General contact" data-sv="Allmän kontakt">General contact</option>
+                <option value="harassment" data-en="Anti-harassment support" data-sv="Trakasseristöd">Anti-harassment support</option>
+              </select>
+            </div>
+
+            <div class="form-grid-two">
+              <div class="form-row">
+                <label for="name" data-en="Your name" data-sv="Ditt namn">Your name</label>
+                <input id="name" name="name" type="text" placeholder="Jane Doe" />
+              </div>
+              <div class="form-row">
+                <label for="email" data-en="Email" data-sv="E-post">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="subject" data-en="Subject" data-sv="Ämne">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="How can we help?" />
+            </div>
+
+            <div class="form-row">
+              <label for="message" data-en="Message" data-sv="Meddelande">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Write your message…"></textarea>
+            </div>
+
+            <div id="privacyNote" class="note">
+              <span data-en="You can send anonymously when contacting the anti-harassment team. Name and email are optional."
+                    data-sv="Du kan kontakta trakasseriteamet anonymt. Namn och e-post är frivilliga.">
+                You can send anonymously when contacting the anti-harassment team. Name and email are optional.
+              </span>
+            </div>
+
+            <div class="form-row actions">
+              <button type="submit" class="btn btn-primary" id="sendBtn" data-en="Open email to send" data-sv="Öppna e-post för att skicka">Open email to send</button>
+              <button type="reset" class="btn btn-outline" data-en="Clear" data-sv="Rensa">Clear</button>
+            </div>
+
+            <div class="tiny" data-en="Submitting will open your email app with a prefilled message."
+                 data-sv="När du skickar öppnas ditt e-postprogram med ett förifyllt meddelande.">
+              Submitting will open your email app with a prefilled message.
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -205,14 +289,14 @@
       <div><strong>ASK</strong> — <span data-en="Arcada Student Union" data-sv="Arcada Studerandekår">Arcada Student Union</span></div>
       <div class="foot-small">
         © <span id="year"></span> ASK |
-        <a href="https://www.instagram.com/askenfi/" target="_blank" rel="noopener" aria-label="Instagram">
+        <a href="https://instagram.com/arcadastuderandekar" target="_blank" rel="noopener" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- Inline JS: nav, events, language toggle -->
+  <!-- Inline JS: nav, events, language toggle, contact form -->
   <script>
     // Mobile nav
     const navToggle = document.getElementById('navToggle');
@@ -271,16 +355,67 @@
       renderEvents();
       try { localStorage.setItem('ask-lang', lang); } catch {}
     }
-
-    // Init language (remember preference or detect)
     (function initLang(){
       let saved = null;
       try { saved = localStorage.getItem('ask-lang'); } catch {}
       const auto = (!saved && navigator.language && navigator.language.toLowerCase().startsWith('sv')) ? 'sv' : 'en';
       switchLang(saved || auto || 'en');
     })();
-
     langBtn?.addEventListener('click', () => switchLang(currentLang === 'en' ? 'sv' : 'en'));
+
+    // ---------- Contact form logic ----------
+    const topicEl   = document.getElementById('topic');
+    const nameEl    = document.getElementById('name');
+    const emailEl   = document.getElementById('email');
+    const subjectEl = document.getElementById('subject');
+    const messageEl = document.getElementById('message');
+    const form      = document.getElementById('contactForm');
+    const privacy   = document.getElementById('privacyNote');
+
+    function updateRequirements(){
+      const harassment = topicEl.value === 'harassment';
+      // For harassment: allow anonymous (no required name/email)
+      nameEl.required  = !harassment;
+      emailEl.required = !harassment;
+      subjectEl.required = true;
+      messageEl.required = true;
+      privacy.style.display = harassment ? 'block' : 'none';
+    }
+    topicEl.addEventListener('change', updateRequirements);
+    updateRequirements();
+
+    function enc(v){ return encodeURIComponent(v || ''); }
+
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      updateRequirements();
+      if (!form.checkValidity()){
+        form.reportValidity();
+        return;
+      }
+      const harassment = topicEl.value === 'harassment';
+
+      const to = harassment ? 'hello@asken.fi' : 'info@asken.fi';
+      const cc = harassment ? 'jessica@asken.fi,frej@asken.fi' : '';
+      const subjPrefix = harassment
+        ? (currentLang==='sv' ? '[ASK] Trakasseristöd' : '[ASK] Harassment Support')
+        : (currentLang==='sv' ? '[ASK] Allmän kontakt' : '[ASK] General Contact');
+
+      const subject = `${subjPrefix}: ${subjectEl.value}`.slice(0,150);
+
+      const bodyLines = [
+        messageEl.value,
+        '',
+        '—',
+        (currentLang==='sv' ? 'Skickat via ASK webbplats' : 'Sent via ASK website'),
+        `${currentLang==='sv' ? 'Ärende' : 'Topic'}: ${harassment ? (currentLang==='sv'?'Trakasseristöd':'Harassment support') : (currentLang==='sv'?'Allmän kontakt':'General contact')}`,
+        `${currentLang==='sv' ? 'Namn' : 'Name'}: ${nameEl.value || (currentLang==='sv' ? 'Anonym' : 'Anonymous')}`,
+        `${currentLang==='sv' ? 'E-post' : 'Email'}: ${emailEl.value || (currentLang==='sv' ? 'Ej angivet' : 'Not provided')}`
+      ].join('\n');
+
+      const href = `mailto:${to}?subject=${enc(subject)}&body=${enc(bodyLines)}${cc ? '&cc=' + enc(cc) : ''}`;
+      window.location.href = href;
+    });
   </script>
 </body>
 </html>
