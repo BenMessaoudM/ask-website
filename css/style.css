@@ -145,14 +145,4 @@ footer{margin-top:2rem;background:linear-gradient(135deg,var(--ask-primary),var(
 /* Utilities */
 .gradient-text{background:linear-gradient(135deg,var(--ask-primary),var(--ask-secondary));-webkit-background-clip:text;background-clip:text;color:transparent}
 
-/* Dark mode */
-@media (prefers-color-scheme:dark){
-  body{background:#0f0f11;color:#e9e9ef}
-  .header{background:rgba(20,20,26,.7);border-color:#2a2a34}
-  .nav-links a{color:#f2eef3}
-  .card{background:#17171c;border-color:#2a2a34}
-  .subtitle,.section-sub,.role,.email,.foot-small{color:#c8c8d2}
-  .event{border-color:#2a2a34}
-  .hours-table td{ border-bottom:1px dashed #2a2a34; }
-  .note{ background:#241828; border-color:#3b2a40; color:#d9cfe0; }
 }
