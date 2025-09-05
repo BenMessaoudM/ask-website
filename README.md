@@ -8,7 +8,7 @@ This project is built as a **responsive static site** using **HTML, CSS, and Jav
 ---
 
 ## 🔗 Live Preview
-🌍 [View on GitHub Pages](https://benmessaoudm.github.io/ask-website/)
+🌍 [View on GitHub Pages](https:////asken.fi/)
 
 ---
 
