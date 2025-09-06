@@ -145,4 +145,3 @@ footer{margin-top:2rem;background:linear-gradient(135deg,var(--ask-primary),var(
 /* Utilities */
 .gradient-text{background:linear-gradient(135deg,var(--ask-primary),var(--ask-secondary));-webkit-background-clip:text;background-clip:text;color:transparent}
 
-}
