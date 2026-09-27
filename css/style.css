@@ -459,3 +459,6 @@ footer {
   .association-grid,.people-grid {grid-template-columns:1fr}
   .section-links {gap:14px 22px}
 }
+
+.contact-logo {display:block;width:200px;height:auto;margin-bottom:32px}
+.cor-logo {display:block;width:106px;height:auto;margin-bottom:24px}

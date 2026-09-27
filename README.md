@@ -43,4 +43,4 @@ The page does not publish internal governance records, access codes or unconfirm
 
 Board names and roles and the five associations come from the supplied *ASK presentation - English 2026 - Exchange (1).pdf*. The current roster supersedes the original placeholder; photos are not inferred from legacy portraits. Cor booking enquiries explicitly link to info@asken.fi.
 
-The bylaws section currently offers a request link, **not a PDF download**: the official Swedish bylaws were not found in the supplied files or verified public sources. Add the approved PDF and replace the request notice in both languages once supplied. Do not create substitute bylaws or publish a reconstructed version.
+The bylaws download is `documents/ASK_Stadgar_2026.pdf` (Swedish). Approval on 1 June 2026 was confirmed by the user. Struck-out wording, highlighting and editorial movement notes were removed; the retained wording was verified after reflow. Original X section/chapter numbering is preserved rather than inventing new legal cross-references. Supplied white ASK and Cor logos are used unchanged.
