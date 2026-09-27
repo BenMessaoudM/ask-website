@@ -1,418 +1,204 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ASK — Arcada Studerandekår / Arcada Student Union</title>
-  <meta name="description" content="ASK (Arcada Studerandekår / Arcada Student Union) — community, support, and student life at Arcada UAS." />
-  <meta name="theme-color" content="#A32F8E" />
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Font Awesome for Instagram icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arcada studerandekår – ASK | Ditt studieliv börjar här</title>
+<meta name="description" content="Lär känna ASK, Arcadas studerandekår. Information om medlemskap, intressebevakning, tutorverksamhet, evenemang och Cor-huset.">
+<meta name="theme-color" content="#A32F8E">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer>
+</script>
+<link rel="alternate" hreflang="sv" href="index.html">
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="alternate" hreflang="x-default" href="index.html">
 </head>
 <body>
-  <header class="header" role="banner">
-    <nav class="nav" aria-label="Primary">
-      <a href="#home" class="brand">
-        <img class="brand-logo" src="images/ASK-logo-black.png" alt="ASK logo" />
-        <span id="brand-text"
-          data-en="Arcada Student Union<br><small>Since 1997</small>"
-          data-sv="Arcada Studerandekår<br><small>Sedan 1997</small>">
-          Arcada Student Union<br><small>Since 1997</small>
-        </span>
-      </a>
-
-      <button class="burger" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-
-      <div class="nav-links" id="navLinks">
-        <a href="#home" data-en="Home" data-sv="Hem">Home</a>
-        <a href="#about" data-en="About" data-sv="Om ASK">About</a>
-        <a href="#board" data-en="Board" data-sv="Styrelsen">Board</a>
-        <a href="#events" data-en="Events" data-sv="Evenemang">Events</a>
-        <a href="#contact" data-en="Contact" data-sv="Kontakt">Contact</a>
-        <a href="https://kide.app/community/b112ffe9-2deb-4894-a4b8-ed1b70ef1a00" target="_blank" rel="noopener" style="font-weight:800">Kide.app ↗</a>
-        <a href="https://www.instagram.com/askenfi" target="_blank" rel="noopener" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
-        <button id="langToggle" class="btn btn-outline" style="margin-left:1rem;">Svenska 🇸🇪</button>
-      </div>
-    </nav>
-  </header>
-
-  <main id="home" role="main">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-inner">
-        <div id="hero-kicker" class="kicker"
-          data-en="Arcada Student Union"
-          data-sv="Arcada Studerandekår">Arcada Student Union</div>
-
-        <h1 id="hero-title" class="title">
-          <span class="gradient-text"
-            data-en="Welcome to ASK"
-            data-sv="Välkommen till ASK">Welcome to ASK</span>
-        </h1>
-
-        <p id="hero-subtitle" class="subtitle"
-          data-en="We represent Arcada students, organize events, support well-being, and build community."
-          data-sv="Vi representerar Arcadas studerande, ordnar evenemang, stöder välmående och bygger gemenskap.">
-          We represent Arcada students, organize events, support well-being, and build community.
-        </p>
-
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://kide.app/community/b112ffe9-2deb-4894-a4b8-ed1b70ef1a00" target="_blank" rel="noopener">Kide.app</a>
-          <a id="learn-more" class="btn btn-outline" href="#about" data-en="Learn more" data-sv="Läs mer">Learn more</a>
-          <a class="btn btn-outline" href="https://www.instagram.com/askenfi" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <h2 class="section-title" data-en="About ASK" data-sv="Om ASK">About ASK</h2>
-      <p class="section-sub" data-en="Arcada Student Union" data-sv="Arcada Studerandekår">Arcada Student Union</p>
-      <div class="about">
-        <div>
-          <p id="about-text"
-            data-en="ASK is the official student union of Arcada University of Applied Sciences. Founded in 1997, ASK represents student interests, supports well-being, and builds a strong community through events, tutoring, and advocacy."
-            data-sv="ASK är den officiella studerandekåren vid Arcada. Sedan 1997 har ASK representerat studerandenas intressen, stöttat välmående och byggt en stark gemenskap genom evenemang, tutorverksamhet och påverkansarbete.">
-            ASK is the official student union of Arcada University of Applied Sciences. Founded in 1997, ASK represents student interests, supports well-being, and builds a strong community through events, tutoring, and advocacy.
-          </p>
-          <ul>
-            <li data-en="Representation & advocacy" data-sv="Representation & intressebevakning">Representation & advocacy</li>
-            <li data-en="Events" data-sv="Evenemang">Events</li>
-            <li data-en="Tutoring & study support" data-sv="Tutorering & studiestöd">Tutoring & study support</li>
-            <li data-en="Well-being & anti-harassment support" data-sv="Välmående & trakasseristöd">Well-being & anti-harassment support</li>
-          </ul>
-        </div>
-        <div>
-          <img src="images/cor-house.png" alt="ASK Cor-house at Arcada campus" loading="lazy" />
-        </div>
-      </div>
-    </section>
-
-    <!-- BOARD -->
-    <section id="board">
-      <h2 class="section-title" data-en="Board 2025" data-sv="Styrelsen 2025">Board 2025</h2>
-      <p class="section-sub" data-en="Meet the team" data-sv="Möt teamet">Meet the team</p>
-
-      <div class="grid grid-4">
-        <article class="card member">
-          <img src="images/Jessica-1.jpg" alt="Jessica Lindfors" />
-          <h4>Jessica Lindfors</h4>
-          <div class="role"
-            data-en="Chairperson of the Board, harassment contact person"
-            data-sv="Styrelseordförande, trakasseriombud">
-            Chairperson of the Board, harassment contact person
-          </div>
-          <div class="email"><a href="mailto:jessica@asken.fi">jessica@asken.fi</a></div>
-        </article>
-
-        <article class="card member">
-          <img src="images/Musse-1.jpg" alt="Mustapha  Ben Messaoud" />
-          <h4>Mustapha "Musse" Ben Messaoud</h4>
-          <div class="role"
-            data-en="Vice chairperson of the Board"
-            data-sv="Vice ordförande">
-            Vice chairperson of the Board
-          </div>
-          <div class="email"><a href="mailto:mustapha@asken.fi">mustapha@asken.fi</a></div>
-        </article>
-
-        <article class="card member">
-          <img src="images/Musa-3.jpg" alt="Musawir Ahmad" />
-          <h4>Musawir Ahmad</h4>
-          <div class="role"
-            data-en="Member of the Board, collaborations & advocacy"
-            data-sv="Styrelsemedlem, samarbeten & intressebevakning">
-            Member of the Board, collaborations & advocacy
-          </div>
-          <div class="email"><a href="mailto:musawir@asken.fi">musawir@asken.fi</a></div>
-        </article>
-
-        <article class="card member">
-          <img src="images/Vedant-4.jpg" alt="Vedant Athreya" />
-          <h4>Vedant Athreya</h4>
-          <div class="role"
-            data-en="Member of the Board, finance & administration"
-            data-sv="Styrelsemedlem, ekonomi & förvaltning">
-            Member of the Board, finance & administration
-          </div>
-          <div class="email"><a href="mailto:vedant@asken.fi">vedant@asken.fi</a></div>
-        </article>
-
-         <article class="card member">
-          <img src="images/Annika-1.jpg" alt="Annika Leppä" />
-          <h4>Annika Leppä</h4>
-          <div class="role"
-            data-en="Member of the Board, marketing & communication"
-            data-sv="Styrelsemedlem, marknadsföring & kommunikation">
-            Member of the Board, marketing & communication
-          </div>
-          <div class="email"><a href="mailto:annika@asken.fi">annika@asken.fi</a></div>
-        </article>
-        
-        <article class="card member">
-          <img src="images/Elin-4.jpg" alt="Elin Högback" />
-          <h4>Elin Högback</h4>
-          <div class="role"
-            data-en="Member of the Board, events & tutoring"
-            data-sv="Styrelsemedlem, evenemang & tutorering">
-            Member of the Board, events & tutoring
-          </div>
-          <div class="email"><a href="mailto:elin@asken.fi">elin@asken.fi</a></div>
-        </article>
-
-        <article class="card member">
-          <img src="images/Frej-3.jpg" alt="Frej Knichter" />
-          <h4>Frej Knichter</h4>
-          <div class="role"
-            data-en="Member of the Board, events, tutoring & harassment contact person"
-            data-sv="Styrelsemedlem, evenemang, tutorering & trakasseriombud">
-            Member of the Board, events, tutoring & harassment contact person
-          </div>
-          <div class="email"><a href="mailto:frej@asken.fi">frej@asken.fi</a></div>
-        </article>
-        
-        <article class="card member">
-          <img src="images/Rifat-5.jpg" alt="Abubokor Rifat" />
-          <h4>Abubokor Rifat</h4>
-          <div class="role"
-            data-en="Member of the Board, events & tutoring"
-            data-sv="Styrelsemedlem, evenemang & tutorering">
-            Member of the Board, events & tutoring
-          </div>
-          <div class="email"><a href="mailto:rifat@asken.fi">rifat@asken.fi</a></div>
-        </article>
-      </div>
-    </section>
-
-    <!-- EVENTS -->
-    <section id="events">
-      <h2 class="section-title" data-en="Upcoming events" data-sv="Kommande evenemang">Upcoming events</h2>
-      <div id="eventsList" class="card"></div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2 class="section-title" data-en="Contact" data-sv="Kontakt">Contact</h2>
-
-      <div class="contact-grid">
-        <!-- Address & hours -->
-        <aside class="card contact-card">
-          <h3 class="contact-title" data-en="Visit us" data-sv="Besök oss">Visit us</h3>
-          <p>
-            <strong data-en="Address:" data-sv="Adress:">Address:</strong>
-            <a href="https://maps.google.com/?q=Toukolankatu 11, 00560 Helsinki" target="_blank" rel="noopener">
-              Toukolankatu 11, 00560 Helsinki
-            </a>
-          </p>
-      
-          <p><strong data-en="Phone:" data-sv="Telefon:">Phone:</strong> <a href="tel:+358453274220">045 3274220</a></p>
-
-          <div class="hours">
-            <div class="hours-title" data-en="Opening hours" data-sv="Öppettider">Opening hours</div>
-            <table class="hours-table" aria-label="Opening hours">
-              <tbody>
-                <tr><th data-en="Monday" data-sv="Måndag">Monday</th><td data-en="Closed" data-sv="Stängt">Closed</td></tr>
-                <tr><th data-en="Tuesday" data-sv="Tisdag">Tuesday</th><td>12–4 pm</td></tr>
-                <tr><th data-en="Wednesday" data-sv="Onsdag">Wednesday</th><td>12–4 pm</td></tr>
-                <tr><th data-en="Thursday" data-sv="Torsdag">Thursday</th><td>12–4 pm</td></tr>
-                <tr><th data-en="Friday" data-sv="Fredag">Friday</th><td data-en="Closed" data-sv="Stängt">Closed</td></tr>
-                <tr><th data-en="Saturday" data-sv="Lördag">Saturday</th><td data-en="Closed" data-sv="Stängt">Closed</td></tr>
-                <tr><th data-en="Sunday" data-sv="Söndag">Sunday</th><td data-en="Closed" data-sv="Stängt">Closed</td></tr>
-              </tbody>
-            </table>
-            <div class="hours-note" data-en="Hours may vary during holidays or events." data-sv="Tider kan variera under helger eller evenemang.">Hours may vary during holidays or events.</div>
-          </div>
-        </aside>
-
-        <!-- Contact form -->
-        <div class="card contact-card">
-          <h3 class="contact-title" data-en="Send us a message" data-sv="Skicka ett meddelande">Send us a message</h3>
-
-          <form id="contactForm" novalidate>
-            <div class="form-row">
-              <label for="topic" data-en="Topic" data-sv="Ärende">Topic</label>
-              <select id="topic" name="topic" required>
-                <option value="general" selected data-en="General contact" data-sv="Allmän kontakt">General contact</option>
-                <option value="harassment" data-en="Anti-harassment support" data-sv="Trakasseristöd">Anti-harassment support</option>
-              </select>
-            </div>
-
-            <div class="form-grid-two">
-              <div class="form-row">
-                <label for="name" data-en="Your name" data-sv="Ditt namn">Your name</label>
-                <input id="name" name="name" type="text" placeholder="Jane Doe" />
-              </div>
-              <div class="form-row">
-                <label for="email" data-en="Email" data-sv="E-post">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com" />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <label for="subject" data-en="Subject" data-sv="Ämne">Subject</label>
-              <input id="subject" name="subject" type="text" placeholder="How can we help?" />
-            </div>
-
-            <div class="form-row">
-              <label for="message" data-en="Message" data-sv="Meddelande">Message</label>
-              <textarea id="message" name="message" rows="6" placeholder="Write your message…"></textarea>
-            </div>
-
-            <div id="privacyNote" class="note">
-              <span data-en="You can send anonymously when contacting the anti-harassment team. Name and email are optional."
-                    data-sv="Du kan kontakta trakasseriteamet anonymt. Namn och e-post är frivilliga.">
-                You can send anonymously when contacting the anti-harassment team. Name and email are optional.
-              </span>
-            </div>
-
-            <div class="form-row actions">
-              <button type="submit" class="btn btn-primary" id="sendBtn" data-en="Open email to send" data-sv="Öppna e-post för att skicka">Open email to send</button>
-              <button type="reset" class="btn btn-outline" data-en="Clear" data-sv="Rensa">Clear</button>
-            </div>
-
-            <div class="tiny" data-en="Submitting will open your email app with a prefilled message."
-                 data-sv="När du skickar öppnas ditt e-postprogram med ett förifyllt meddelande.">
-              Submitting will open your email app with a prefilled message.
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div><strong>ASK</strong> — <span data-en="Arcada Student Union" data-sv="Arcada Studerandekår">Arcada Student Union</span></div>
-      <div class="foot-small">
-        © <span id="year"></span> ASK |
-        <a href="https://www.instagram.com/askenfi" target="_blank" rel="noopener" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Inline JS: nav, events, language toggle, contact form -->
-  <script>
-    // Mobile nav
-    const navToggle = document.getElementById('navToggle');
-    const navLinks  = document.getElementById('navLinks');
-    navToggle?.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Events (auto-hide past) — corrected locations
-    const events = [
-      { start: '2025-09-03', title: 'Kick-off',           place: 'Maxine, Urho Kekkosen katu 1, Helsinki' },
-      { start: '2025-09-10', title: 'Gulis Initiation',   place: 'Downtown Helsinki' },
-      { start: '2025-09-10', title: 'Gulis Afterparty',   place: 'NoName Bar & Nightclub, Kalevankatu 6, Helsinki' },
-      { start: '2025-09-18', title: 'Mölkky Tournament', place: 'Innergården,Romgatan 5B, Helsinki' },
-      { start: '2025-09-23', end: '2025-09-26', title: 'Gulis Sitz', place: 'Cor-house,Majstadsgatan 11, Helsinki' }
-    ];
-
-    const eventsList = document.getElementById('eventsList');
-    const today = new Date(); today.setHours(0,0,0,0);
-    let currentLang = 'en';
-
-    function renderEvents() {
-      const upcoming = events
-        .filter(ev => { const end = new Date(ev.end || ev.start); end.setHours(0,0,0,0); return end >= today; })
-        .sort((a,b) => new Date(a.start) - new Date(b.start));
-
-      const fmt = d => new Date(d).toLocaleDateString(
-        currentLang === 'sv' ? 'sv' : 'en',
-        { year:'numeric', month:'short', day:'numeric' }
-      );
-
-      eventsList.innerHTML = upcoming.map(ev => `
-        <div class="event">
-          <div class="date">${ev.end ? `${fmt(ev.start)} – ${fmt(ev.end)}` : fmt(ev.start)}</div>
-          <div>
-            <div style="font-weight:800">${ev.title}</div>
-            <div class="section-sub">${ev.place}</div>
-          </div>
-        </div>
-      `).join('');
-    }
-    renderEvents();
-
-    // Language toggle (🇬🇧/🇸🇪)
-    const langBtn = document.getElementById('langToggle');
-    function switchLang(lang){
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.innerHTML = el.getAttribute('data-' + lang);
-      });
-      currentLang = lang;
-      langBtn.textContent = lang === 'en' ? 'Svenska 🇸🇪' : 'English 🇬🇧';
-      renderEvents();
-      try { localStorage.setItem('ask-lang', lang); } catch {}
-    }
-    (function initLang(){
-      let saved = null;
-      try { saved = localStorage.getItem('ask-lang'); } catch {}
-      const auto = (!saved && navigator.language && navigator.language.toLowerCase().startsWith('sv')) ? 'sv' : 'en';
-      switchLang(saved || auto || 'en');
-    })();
-    langBtn?.addEventListener('click', () => switchLang(currentLang === 'en' ? 'sv' : 'en'));
-
-    // ---------- Contact form logic ----------
-    const topicEl   = document.getElementById('topic');
-    const nameEl    = document.getElementById('name');
-    const emailEl   = document.getElementById('email');
-    const subjectEl = document.getElementById('subject');
-    const messageEl = document.getElementById('message');
-    const form      = document.getElementById('contactForm');
-    const privacy   = document.getElementById('privacyNote');
-
-    function updateRequirements(){
-      const harassment = topicEl.value === 'harassment';
-      // For harassment: allow anonymous (no required name/email)
-      nameEl.required  = !harassment;
-      emailEl.required = !harassment;
-      subjectEl.required = true;
-      messageEl.required = true;
-      privacy.style.display = harassment ? 'block' : 'none';
-    }
-    topicEl.addEventListener('change', updateRequirements);
-    updateRequirements();
-
-    function enc(v){ return encodeURIComponent(v || ''); }
-
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      updateRequirements();
-      if (!form.checkValidity()){
-        form.reportValidity();
-        return;
-      }
-      const harassment = topicEl.value === 'harassment';
-
-      const to = harassment ? 'hello@asken.fi' : 'info@asken.fi';
-      const cc = harassment ? 'jessica@asken.fi,frej@asken.fi' : '';
-      const subjPrefix = harassment
-        ? (currentLang==='sv' ? '[ASK] Trakasseristöd' : '[ASK] Harassment Support')
-        : (currentLang==='sv' ? '[ASK] Allmän kontakt' : '[ASK] General Contact');
-
-      const subject = `${subjPrefix}: ${subjectEl.value}`.slice(0,150);
-
-      const bodyLines = [
-        messageEl.value,
-        '',
-        '—',
-        (currentLang==='sv' ? 'Skickat via ASK webbplats' : 'Sent via ASK website'),
-        `${currentLang==='sv' ? 'Ärende' : 'Topic'}: ${harassment ? (currentLang==='sv'?'Trakasseristöd':'Harassment support') : (currentLang==='sv'?'Allmän kontakt':'General contact')}`,
-        `${currentLang==='sv' ? 'Namn' : 'Name'}: ${nameEl.value || (currentLang==='sv' ? 'Anonym' : 'Anonymous')}`,
-        `${currentLang==='sv' ? 'E-post' : 'Email'}: ${emailEl.value || (currentLang==='sv' ? 'Ej angivet' : 'Not provided')}`
-      ].join('\n');
-
-      const href = `mailto:${to}?subject=${enc(subject)}&body=${enc(bodyLines)}${cc ? '&cc=' + enc(cc) : ''}`;
-      window.location.href = href;
-    });
-  </script>
+<a class="skip" href="#main">Hoppa till innehållet</a>
+<header>
+<div class="header-inner">
+<a class="brand" href="index.html">
+<img src="images/ASK-logo-black.png" width="108" height="40" alt="ASK">
+<span>Arcada studerandekår</span>
+</a>
+<nav aria-label="Huvudmeny" id="navigation">
+<a href="#about">Om ASK</a>
+<a href="#membership">Medlemskap</a>
+<a href="#student-life">Studieliv</a>
+<a href="#cor">Cor-huset</a>
+<a href="#contact">Kontakt</a>
+</nav>
+<div class="header-controls">
+<a class="language" href="en.html" lang="en" hreflang="en">EN <span aria-hidden="true">↗</span>
+</a>
+<button id="navToggle" aria-expanded="false" aria-controls="navigation">Meny</button>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="hero wrap">
+<div class="hero-copy">
+<p class="eyebrow">Av studerande. För studerande.</p>
+<h1>Din röst.<br>Din gemenskap.<br>
+<em>Ditt ASK.</em>
+</h1>
+<p class="intro">Vi finns för dig som studerar på Arcada. Tillsammans gör vi studietiden till mer än föreläsningar och tentor.</p>
+<div class="actions">
+<a class="button" href="#membership">Bli en del av ASK <span aria-hidden="true">↗</span>
+</a>
+<a class="text-link" href="#about">Lär känna oss</a>
+</div>
+<div class="hero-note">HELSINGFORS · HELSINKI <span> SEDAN 1997</span>
+</div>
+</div>
+<figure class="hero-image">
+<img src="images/cor-house.png" width="680" height="454" alt="Cor-husets träfasad och breda entrétrappa" fetchpriority="high">
+<figcaption>
+<span>En plats för studielivet</span>
+<strong>Vi ses på Cor.</strong>
+<a href="#cor">Upptäck Cor-huset ↗</a>
+</figcaption>
+</figure>
+</section>
+<div class="ribbon">
+<div class="wrap">
+<span>GEMENSKAP</span>
+<span aria-hidden="true">✳</span>
+<span>INTRESSEBEVAKNING</span>
+<span aria-hidden="true">✳</span>
+<span>STUDIELIV</span>
+<span aria-hidden="true">✳</span>
+<span>ASK</span>
+</div>
+</div>
+<section id="about" class="wrap section">
+<div class="section-heading">
+<p class="eyebrow">01 / OM ASK</p>
+<h2>En studerandekår.<br>Många möjligheter.</h2>
+<p>ASK är Arcadas studerandekår. Vi arbetar för studerandes intressen och skapar möten mellan människor, utbildningar och kulturer.</p>
+</div>
+<div class="services">
+<article class="service">
+<span class="number">01</span>
+<h3>Din röst på Arcada</h3>
+<p>Har du tankar om din studievardag? ASK samlar studerandes perspektiv och driver frågor som berör livet på högskolan.</p>
+<a class="text-link" href="mailto:info@asken.fi">Ta kontakt <span aria-hidden="true">↗</span>
+</a>
+</article>
+<article class="service">
+<span class="number">02</span>
+<h3>En bra start</h3>
+<p>Ny på Arcada? Tutorer hjälper dig att hitta rätt, träffa andra studerande och komma in i studielivet.</p>
+<a class="text-link" href="https://start.arcada.fi/">Till Arcadas studentportal <span aria-hidden="true">↗</span>
+</a>
+</article>
+<article class="service">
+<span class="number">03</span>
+<h3>Du ska känna dig trygg</h3>
+<p>Behöver du stöd eller kontakt med ett trakasseriombud? Du hittar aktuella kontaktpersoner via ASKs samlade länkar.</p>
+<a class="text-link" href="https://linktr.ee/askenfi">Hitta stöd och kontaktpersoner <span aria-hidden="true">↗</span>
+</a>
+</article>
+</div>
+</section>
+<section id="membership" class="membership">
+<div class="wrap membership-inner">
+<div>
+<p class="eyebrow">02 / MEDLEMSKAP</p>
+<h2>Studietiden är<br>bättre tillsammans.</h2>
+<p>Med ditt medlemskap stöder du studerandegemenskapen och ASKs arbete. Bli medlem via Kide.app.</p>
+<a class="button light" href="https://kide.app/memberships/c3897a2b-9054-4f6a-8227-7f8c78e04249">Till medlemskapet på Kide.app ↗</a>
+</div>
+<div class="benefits">
+<div>
+<span>01</span>
+<h3>Gemenskap</h3>
+<p>Möt andra studerande och delta i kårens verksamhet.</p>
+</div>
+<div>
+<span>02</span>
+<h3>Studerandeförmåner</h3>
+<p>Läs aktuella medlemsvillkor och information om studiekort via ASKs länkar.</p>
+</div>
+<div>
+<span>03</span>
+<h3>Möjlighet att påverka</h3>
+<p>Engagera dig i frågor som är viktiga för dig och dina medstuderande.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="student-life" class="wrap section">
+<div class="section-heading">
+<p class="eyebrow">03 / STUDIELIV</p>
+<h2>Hitta ditt sammanhang.</h2>
+<p>Från de första introdagarna till nya vänner och gemensamma traditioner. Det finns många sätt att vara med.</p>
+</div>
+<div class="life-grid">
+<article class="event-panel">
+<p class="eyebrow">EVENEMANG & BILJETTER</p>
+<h3>Vad händer härnäst?</h3>
+<p>Se publicerade evenemang, biljettpriser och anmälningar på Kide.app. Följ Instagram för nyheter och uppdateringar.</p>
+<a class="button" href="https://kide.app/community/b112ffe9-2deb-4894-a4b8-ed1b70ef1a00">Se evenemang på Kide.app ↗</a>
+<a class="text-link" href="https://www.instagram.com/askenfi">Instagram @askenfi ↗</a>
+</article>
+<div class="life-details">
+<article>
+<h3>Ny studerande? Välkommen!</h3>
+<p>Du behöver inte känna någon för att komma med. Fråga din tutor om studielivet eller kontakta ASK så hjälper vi dig vidare.</p>
+</article>
+<article>
+<h3>Engagera dig</h3>
+<p>Vill du bli tutor, delta i verksamheten eller dela en idé? Hör av dig till oss och fråga om aktuella möjligheter.</p>
+<a class="text-link" href="mailto:info@asken.fi">Säg hej till ASK ↗</a>
+</article>
+</div>
+</div>
+</section>
+<section id="cor" class="cor-section">
+<div class="wrap cor-inner">
+<div>
+<p class="eyebrow">04 / COR-HUSET</p>
+<h2>Studerandenas<br>eget hus.</h2>
+</div>
+<div>
+<p class="intro">Cor-huset är en mötesplats för studielivet. Här finns också ASKs kontor på andra våningen.</p>
+<p>Vill du besöka oss eller fråga om att hyra utrymmen? Kontakta ASK för aktuella besökstider, tillgänglighet, priser och bokningsvillkor.</p>
+<a class="text-link" href="mailto:info@asken.fi">Fråga om Cor-huset ↗</a>
+</div>
+</div>
+</section>
+<section id="board" class="wrap section team-section">
+<div>
+<p class="eyebrow">05 / MÄNNISKORNA BAKOM ASK</p>
+<h2>Vi finns här för dig.</h2>
+</div>
+<div class="team-note">
+<h3>Styrelse & personal</h3>
+<p>Årets presentation av styrelsen och personalen uppdateras. Under tiden hittar du aktuella kontaktpersoner via ASKs samlade länkar.</p>
+<a class="text-link" href="https://linktr.ee/askenfi">Hitta rätt kontaktperson ↗</a>
+</div>
+</section>
+<section id="contact" class="contact">
+<div class="wrap">
+<p class="eyebrow">06 / KONTAKT</p>
+<h2>En fråga? En idé?<br>Vi lyssnar.</h2>
+<a class="email" href="mailto:info@asken.fi">info@asken.fi ↗</a>
+<div class="contact-links">
+<a href="https://www.instagram.com/askenfi">Instagram ↗</a>
+<a href="https://linktr.ee/askenfi">Alla ASK-länkar ↗</a>
+<a href="https://kide.app/community/b112ffe9-2deb-4894-a4b8-ed1b70ef1a00">Kide.app ↗</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="wrap">
+<span>© <span id="year">2026</span> Arcada studerandekår – ASK</span>
+<div>
+<a href="index.html" lang="sv" aria-current="page">Svenska</a>
+<a href="en.html" lang="en" >English</a>
+<a href="#main">Till toppen ↑</a>
+</div>
+</footer>
 </body>
 </html>
