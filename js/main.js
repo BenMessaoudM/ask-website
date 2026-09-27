@@ -1,99 +1,74 @@
-/* ========= js/main.js =========
-   - Mobile nav toggle
-   - Year in footer
-   - Events (auto-hide past, corrected locations)
-   - Language toggle (English <-> Swedish) with flag, switches any element that has data-en / data-sv
-   - Re-renders event dates to selected locale
-================================= */
-
-// ---------- Mobile nav ----------
-const navToggle = document.getElementById('navToggle');
-const navLinks  = document.getElementById('navLinks');
-
-navToggle?.addEventListener('click', () => {
-  const open = navLinks.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+'use strict';
+document.documentElement.classList.add('js');
+const toggle = document.getElementById('navToggle');
+const navigation = document.getElementById('navigation');
+function closeMenu() {
+  navigation.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+}
+toggle.addEventListener('click', () => {
+  const open = navigation.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', String(open));
 });
-
-// ---------- Footer year ----------
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-// ---------- Events (auto-hide past) ----------
-const events = [
-  { start: '2025-09-03', title: 'Kick-off',               place: 'Maxine' },
-  { start: '2025-09-10', title: 'Gulis Initiation',       place: 'Downtown Helsinki' },
-  { start: '2025-09-10', title: 'Gulis Afterparty',       place: 'Noname' },
-  { start: '2025-09-18', end: '2025-09-19', title: 'Mölkky (Sport Tutors)', place: 'TBD' },
-  { start: '2025-09-23', end: '2025-09-26', title: 'Gulis Sitz', place: 'Cor-house' }
-];
-
-const eventsList = document.getElementById('eventsList');
-const today = new Date(); today.setHours(0,0,0,0);
-
-// Current language state
-let currentLang = 'en';
-
-// Format date by language
-const fmtDate = (dStr) => {
-  const locale = currentLang === 'sv' ? 'sv' : 'en';
-  return new Date(dStr).toLocaleDateString(locale, { year:'numeric', month:'short', day:'numeric' });
-};
-
-// Build events HTML
-function renderEvents() {
-  if (!eventsList) return;
-
-  const upcoming = events
-    .filter(ev => {
-      const end = new Date(ev.end || ev.start);
-      end.setHours(0,0,0,0);
-      return end >= today;
-    })
-    .sort((a,b) => new Date(a.start) - new Date(b.start));
-
-  eventsList.innerHTML = upcoming.map(ev => `
-    <div class="event">
-      <div class="date">${ev.end ? `${fmtDate(ev.start)} – ${fmtDate(ev.end)}` : fmtDate(ev.start)}</div>
-      <div>
-        <div style="font-weight:800">${ev.title}</div>
-        <div class="section-sub">${ev.place}</div>
-      </div>
-    </div>
-  `).join('');
-}
-
-renderEvents();
-
-// ---------- Language toggle ----------
-const langBtn = document.getElementById('langToggle');
-
-// Switch all elements that have data-en / data-sv
-function switchLang(lang) {
-  document.querySelectorAll('[data-en]').forEach(el => {
-    const next = el.getAttribute(`data-${lang}`);
-    if (next !== null) el.innerHTML = next;
+navigation.addEventListener('click', event => {
+  if (event.target.closest('a')) closeMenu();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && navigation.classList.contains('open')) {
+    closeMenu();
+    toggle.focus();
+  }
+});
+// Keep visitors in the same section when changing language.
+document.querySelectorAll('a[hreflang]').forEach(link => {
+  link.addEventListener('click', () => {
+    link.hash = window.location.hash;
   });
+});
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  currentLang = lang;
-  if (langBtn) langBtn.textContent = lang === 'en' ? 'Svenska 🇸🇪' : 'English 🇬🇧';
-
-  // Re-render dates in selected locale
-  renderEvents();
-
-  // Persist preference
-  try { localStorage.setItem('ask-lang', lang); } catch {}
+// Refresh on load, on tab return and across midnight without a reload.
+function renderEvents() {
+  const list = document.getElementById('eventsList');
+  if (!list || !globalThis.ASKCalendar) return;
+  const sv = document.documentElement.lang === 'sv';
+  const events = ASKCalendar.upcoming();
+  const signature = JSON.stringify(events);
+  if (list.dataset.signature === signature) return;
+  list.dataset.signature = signature;
+  const format = iso => new Intl.DateTimeFormat(sv ? 'sv-SE' : 'en-GB', {
+    day:'numeric',month:'short',year:'numeric',timeZone:'UTC'
+  }).format(new Date(`${iso}T12:00:00Z`));
+  list.replaceChildren();
+  if (!events.length) {
+    const empty = document.createElement('p');
+    empty.textContent = sv ? 'Nya evenemang publiceras snart.' : 'New events will be announced soon.';
+    list.append(empty);
+  }
+  for (const event of events) {
+    const row = document.createElement('article');
+    row.className = 'event-row';
+    const date = document.createElement(event.start ? 'time' : 'span');
+    date.className = 'event-date';
+    if (event.start) {
+      date.dateTime = event.start;
+      date.textContent = event.end ? `${format(event.start)} – ${format(event.end)}` : format(event.start);
+    } else date.textContent = sv ? 'Datum meddelas senare' : 'Date to be announced';
+    const details = document.createElement('div');
+    const title = document.createElement('h3');
+    title.textContent = sv ? event.sv : event.en;
+    details.append(title);
+    if (event.venue) {
+      const venue = document.createElement('p');
+      venue.textContent = event.venue;
+      details.append(venue);
+    }
+    row.append(date, details);
+    list.append(row);
+  }
 }
-
-// Initial language (restore from storage or default EN)
-(function initLang() {
-  let saved = null;
-  try { saved = localStorage.getItem('ask-lang'); } catch {}
-  // If nothing saved, you can auto-detect browser language (optional):
-  const auto = (!saved && navigator.language && navigator.language.toLowerCase().startsWith('sv')) ? 'sv' : 'en';
-  switchLang(saved || auto || 'en');
-})();
-
-langBtn?.addEventListener('click', () => {
-  switchLang(currentLang === 'en' ? 'sv' : 'en');
+renderEvents();
+setInterval(renderEvents, 30000);
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) renderEvents();
 });
