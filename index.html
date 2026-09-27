@@ -7,6 +7,7 @@
 <meta name="description" content="Lär känna ASK, Arcadas studerandekår. Information om medlemskap, intressebevakning, tutorverksamhet, evenemang och Cor-huset.">
 <meta name="theme-color" content="#A32F8E">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/events.js" defer></script>
 <script src="js/main.js" defer>
 </script>
 <link rel="alternate" hreflang="sv" href="index.html">
@@ -36,6 +37,12 @@
 </div>
 </header>
 <main id="main">
+<nav class="section-links wrap" aria-label="Fler avsnitt">
+<a href="#events">Evenemang</a>
+<a href="#associations">Föreningar</a>
+<a href="#board">Styrelsen</a>
+<a href="#bylaws">Stadgar</a>
+</nav>
 <section class="hero wrap">
 <div class="hero-copy">
 <p class="eyebrow">Av studerande. För studerande.</p>
@@ -155,6 +162,17 @@
 </div>
 </div>
 </section>
+<section id="events" class="wrap section calendar-section">
+<p class="eyebrow">EVENEMANG / HÖSTEN 2026</p>
+<h2>På gång hos ASK</h2>
+<p>Hitta ditt nästa evenemang. Biljetter och närmare information publiceras på Kide.app och via ASKs länkar.</p>
+<div id="eventsList" class="event-list" aria-live="polite">
+</div>
+<noscript>
+<p>Aktivera JavaScript för att se kalendern med aktuella evenemang, eller följ länken nedan.</p>
+</noscript>
+<a class="text-link" href="https://linktr.ee/askenfi">Evenemang och biljetter via ASK ↗</a>
+</section>
 <section id="cor" class="cor-section">
 <div class="wrap cor-inner">
 <div>
@@ -164,19 +182,92 @@
 <div>
 <p class="intro">Cor-huset är en mötesplats för studielivet. Här finns också ASKs kontor på andra våningen.</p>
 <p>Vill du besöka oss eller fråga om att hyra utrymmen? Kontakta ASK för aktuella besökstider, tillgänglighet, priser och bokningsvillkor.</p>
-<a class="text-link" href="mailto:info@asken.fi">Fråga om Cor-huset ↗</a>
+<a class="text-link" href="mailto:info@asken.fi">Bokningsförfrågningar: info@asken.fi ↗</a>
 </div>
 </div>
 </section>
-<section id="board" class="wrap section team-section">
-<div>
-<p class="eyebrow">05 / MÄNNISKORNA BAKOM ASK</p>
-<h2>Vi finns här för dig.</h2>
+<section id="associations" class="wrap section">
+<p class="eyebrow">FÖRENINGAR VID ARCADA</p>
+<h2>Fem föreningar. En gemenskap.</h2>
+<p>Specialföreningarna samlar studerande inom olika utbildningsområden och samarbetar med ASK för ett aktivt studieliv.</p>
+<div class="association-grid">
+<article class="association-card">
+<h3>Commedia rf</h3>
+<p>Media</p>
+</article>
+<article class="association-card">
+<h3>HanSe SF rf</h3>
+<p>Ekonomi och företagsekonomi</p>
+</article>
+<article class="association-card">
+<h3>HoSK rf</h3>
+<p>Social- och hälsovård</p>
+</article>
+<article class="association-card">
+<h3>Kult rf</h3>
+<p>Kulturproducentskap</p>
+</article>
+<article class="association-card">
+<h3>TLK rf</h3>
+<p>Teknik</p>
+</article>
 </div>
-<div class="team-note">
-<h3>Styrelse & personal</h3>
-<p>Årets presentation av styrelsen och personalen uppdateras. Under tiden hittar du aktuella kontaktpersoner via ASKs samlade länkar.</p>
-<a class="text-link" href="https://linktr.ee/askenfi">Hitta rätt kontaktperson ↗</a>
+<a class="text-link" href="https://start.arcada.fi/sv/stod-i-studierna/studieliv/arcada-studerandekar-ask/specialforeningarna-och-aes">Läs mer om föreningarna på Arcadas studentportal ↗</a>
+</section>
+<section id="board" class="wrap section">
+<p class="eyebrow">MÄNNISKORNA BAKOM ASK</p>
+<h2>Styrelsen 2026</h2>
+<div class="people-grid">
+<article class="person-card">
+<h3>Mustapha ”Musse” Ben Messaoud</h3>
+<p>Styrelseordförande</p>
+</article>
+<article class="person-card">
+<h3>David Englund</h3>
+<p>Vice ordförande · Trakasseriombud</p>
+</article>
+<article class="person-card">
+<h3>Betül Güler</h3>
+<p>Styrelsemedlem</p>
+</article>
+<article class="person-card">
+<h3>Alexandra Holm-Andersson</h3>
+<p>Styrelsemedlem</p>
+</article>
+<article class="person-card">
+<h3>Fanny Määttä</h3>
+<p>Styrelsemedlem · Trakasseriombud</p>
+</article>
+<article class="person-card">
+<h3>Daniel Neyai</h3>
+<p>Styrelsemedlem</p>
+</article>
+<article class="person-card">
+<h3>Ester Pustõnski</h3>
+<p>Styrelsemedlem</p>
+</article>
+<article class="person-card">
+<h3>Ajusha Rizal</h3>
+<p>Styrelsemedlem</p>
+</article>
+<article class="person-card">
+<h3>Zohair Tariq</h3>
+<p>Styrelsemedlem</p>
+</article>
+</div>
+<a class="text-link" href="https://linktr.ee/askenfi">Kontaktuppgifter till styrelse och personal ↗</a>
+</section>
+<section id="bylaws" class="cor-section">
+<div class="wrap cor-inner">
+<div>
+<p class="eyebrow">DOKUMENT</p>
+<h2>ASKs stadgar</h2>
+</div>
+<div>
+<p>Stadgarna är ett av studerandekårens styrdokument. Den officiella svenska versionen är den primära källan.</p>
+<p>PDF-versionen finns ännu inte på den här sidan. Kontakta ASK för gällande stadgar.</p>
+<a class="text-link" href="mailto:info@asken.fi?subject=ASK%20stadgar">Begär stadgarna: info@asken.fi ↗</a>
+</div>
 </div>
 </section>
 <section id="contact" class="contact">

@@ -18,9 +18,9 @@ Open `index.html` in a browser, or run `python3 -m http.server 8080` from this d
 
 Edit the corresponding section in **both** HTML files. Keep matching section IDs so language links preserve the visitor’s position. Use Swedish official terminology for organisational bodies; official Swedish statutes and regulations take precedence over translations.
 
-The board and staff section deliberately links to ASK’s contact directory until the current names, roles and approved photos are supplied. Legacy 2025 portraits remain in the repository but are not displayed. Replace the `team-note` block on both pages when the new roster is confirmed. Do not infer current roles from old filenames.
+The 2026 board names and roles are based on the supplied ASK presentation. Update the `people-grid` in both pages when the roster changes. Legacy portraits remain unused; add approved current photos only.
 
-Events and membership link to Kide.app, and updates link to ASK’s Instagram. This avoids advertising expired events or unverified fees. Cor House booking inquiries use email; there is no live availability calendar. Confirm hours, fees, booking terms and any named contacts before adding them.
+The dated event calendar and membership section link to Kide.app, and updates link to ASK’s Instagram. This avoids advertising expired events or unverified fees. Cor House booking inquiries use email; there is no live availability calendar. Confirm hours, fees, booking terms and any named contacts before adding them.
 
 ## Hosting
 
@@ -36,3 +36,11 @@ Reviewed on 27 September 2026:
 - Existing repository — ASK logos, Cor House photo, Kide.app community and Instagram URLs.
 
 The page does not publish internal governance records, access codes or unconfirmed board details.
+
+## Autumn 2026 update
+
+`js/events.js` contains the bilingual event list transcribed from the supplied 2026 poster. Change `start` and optional inclusive `end` as ISO dates (`YYYY-MM-DD`). An event remains visible throughout its final day in Europe/Helsinki, then disappears. The list refreshes every 30 seconds and when the browser tab becomes visible. Undated International Sitz remains visible until its date is confirmed. No JavaScript: the page links visitors to ASK's event directory instead of showing an unfiltered calendar.
+
+Board names and roles and the five associations come from the supplied *ASK presentation - English 2026 - Exchange (1).pdf*. The current roster supersedes the original placeholder; photos are not inferred from legacy portraits. Cor booking enquiries explicitly link to info@asken.fi.
+
+The bylaws section currently offers a request link, **not a PDF download**: the official Swedish bylaws were not found in the supplied files or verified public sources. Add the approved PDF and replace the request notice in both languages once supplied. Do not create substitute bylaws or publish a reconstructed version.
