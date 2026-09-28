@@ -45,4 +45,6 @@ Board names and roles and the five associations come from the supplied *ASK pres
 
 The bylaws download is `documents/ASK_Stadgar_2026.pdf` (Swedish). Approval on 1 June 2026 was confirmed by the user. Struck-out wording, highlighting and editorial movement notes were removed; the retained wording was verified after reflow. Original X section/chapter numbering is preserved rather than inventing new legal cross-references. Supplied white ASK and Cor logos are used unchanged.
 
-Association logos in `images/associations/` are extracted unchanged from page 4 of the supplied ASK presentation - English 2026 - Exchange PDF. Their original colours and proportions are preserved.
+The active association logos in `images/associations/*.webp` come from the original files supplied on 28 September 2026: HanSe SF logo.jpg, hoskgron.gif, Kult-logo-ny-2017-1.png, tlklogo.tif and image.png (Commedia). They are lossless WebP conversions at their original dimensions; the CMYK TIFF is converted to RGB for browsers. Artwork and proportions are preserved.
+
+Association Instagram handles and the HanSe, HoSK and TLK website links were verified against Arcada’s official association directory on 28 September 2026.
