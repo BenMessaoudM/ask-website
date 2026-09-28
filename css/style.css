@@ -462,3 +462,7 @@ footer {
 
 .contact-logo {display:block;width:200px;height:auto;margin-bottom:32px}
 .cor-logo {display:block;width:106px;height:auto;margin-bottom:24px}
+
+/* Original association artwork supplied in the ASK 2026 presentation. */
+.association-logo {height:120px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:8px;margin-bottom:20px}
+.association-logo img {display:block;width:144px;height:112px;object-fit:contain}
